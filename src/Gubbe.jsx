@@ -36,7 +36,7 @@ export default function Gubbe() {
                     console.log(falseWord);
                 }
 
-                if (falseWord == 4) {
+                if (falseWord === 4) {
                     alert(lost)}
 
 
