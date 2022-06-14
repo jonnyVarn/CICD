@@ -14,7 +14,7 @@ export default function Gubbe() {
       }
     var ordDB = require('./svenska-ord.json');
     var falseWord = 0; 
-    const toMuchRandom = 0;
+    let toMuchRandom = 0;
     function settoMuchRandom(){if (toMuchRandom === 0) {toMuchRandom = randomword(0,90000);} }
 
     var ord = ordDB[toMuchRandom]; console.log(randomword);
