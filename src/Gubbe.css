@@ -1,0 +1,46 @@
+.Gubbe {
+    text-align: center;
+    background-color: black;
+  }
+
+  .Gubbe.div.#root {
+    background-color: blue;
+  }
+  
+  .Gubbe-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .Gubbe-link {
+    color: #61dafb;
+  }
+
+  button {
+    background-color:azure;
+    display: flex;
+    flex-direction:column;
+  }
+
+  button1 {
+    background-color: yellow;
+  }
+
+  maskeratOrd {
+    align-items: center;
+    font-size: xx-large;
+    font-stretch: ultra-expanded;
+    background-color:blue;
+    display: flex;
+    flex-direction:column-reverse;
+    text-shadow: #282c34;
+    text-decoration: wavy;
+   
+  }
+  
