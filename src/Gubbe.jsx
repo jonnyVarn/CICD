@@ -12,16 +12,14 @@ export default function Gubbe() {
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
       }
-    //var ordDB= ["HÄNGAGUBBE", "SVÅRT", "LÄTT", "SEN", "SOL", "APA", "KATT", "BJÖRN", "KO", "KALV", "ÅSNA"];
     var ordDB = require('./svenska-ord.json');
-    var falseWord = 0;
-    let trueWord = 0;
-    var setOrd = 0; 
-    var ord = ordDB[randomword(0, 90000)]; console.log(randomword);
-    
+    var falseWord = 0; 
+    const toMuchRandom = 0;
+    function settoMuchRandom(){if (toMuchRandom === 0) {toMuchRandom = randomword(0,90000);} }
+
+    var ord = ordDB[toMuchRandom]; console.log(randomword);
     console.log(ord);
-    function changeWord(){setOrd++; ord=ordDB[setOrd]; console.log(ord);}
-    const lost ="Du förlorade";
+    const lost ="Du förlorade! Ordet var " +(ord) + "." ;
     const vann ="Grattis! Du är en vinnare!!";
     const alfabetet = ["a", "b", "c", "d", "e", "f", "g",
         "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
@@ -31,19 +29,10 @@ export default function Gubbe() {
 
     const maskeratOrd = ord.split('').map(letter => 
     correctGuesses.includes(letter) ? letter : "_").join(" ");
-    //const[getName, setName]=useState(false);
-    //const handleNameChange = () => {setName(!getName);}
-/*
-<button inputMode='skriv'>Ändra ord</button>
-            <button onClick={handleNameChange}>
-           {getName ? 'off' : 'on'}
-       </button>
-*/
     return  <div>
             
 
-            <button onClick={RefreshPage}>Refresh</button>
-            <button onClick={changeWord}>byt ord</button>
+            <button onClick={RefreshPage}>Börja om</button>
             <p>{maskeratOrd}</p>
            
             {alfabetet
@@ -51,10 +40,6 @@ export default function Gubbe() {
             <button key={index} onClick={() => {
                 if (ord.includes(alfabetet)) {
                     setCorrectGuesses([...correctGuesses, alfabetet]);
-                    trueWord++;
-                    console.log(trueWord);
-                    console.log(ord.length);
-                    console.log(correctGuesses.length);
                 }
 
                 if (!ord.includes(alfabetet)) {
@@ -63,17 +48,9 @@ export default function Gubbe() {
                 }
 
                 if (falseWord === 5) {
+
                     alert(lost)
-                    {window.location.reload(true)};
                 }
-
-                if (!maskeratOrd.includes("_")) {
-                    alert(vann);
-                    {window.location.reload(true)};
-                }
-
-
-
 
             }}>{alfabetet}</button>)}
             {!maskeratOrd.includes("_") && <p>{vann} </p>}
