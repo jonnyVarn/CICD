@@ -1,5 +1,4 @@
 import React, {useState} from 'react'; 
-import { render } from 'react-dom';
 export default function Gubbe() {
     
     //cors måste sätta upp en backend för att få till to do
@@ -26,6 +25,7 @@ export default function Gubbe() {
     return  <div>
             <button inputMode='skriv'>Ändra ord</button>
             <button inputMode='window.location.reload();'>reload</button>
+            
             <p>{maskeratOrd}</p>
             {alfabetet
             .map((alfabetet, index) => 
