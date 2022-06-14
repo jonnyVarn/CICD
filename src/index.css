@@ -3,11 +3,24 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-size: xx-large;
+  font-stretch: ultra-expanded;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: blue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-size: larger;
+}
+
+button {
+  background-color: orange;
+  font-size: large;
+}
+
+.button1 {
+  background-color: blue;
 }
